@@ -3,6 +3,7 @@ package com.example.inventpanroll.presentation.components
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -26,6 +27,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.inventpanroll.R
 
 @Composable
@@ -35,11 +37,13 @@ fun CardComponents(
     Activos: String,
     Inactivos: String,
     Mantenimientos: String,
+    ClickAction: () -> Unit = {},
 ) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .height(200.dp),
+            .height(200.dp)
+            .clickable { ClickAction() },
 
         shape = RoundedCornerShape(16.dp),
         elevation = CardDefaults.cardElevation(4.dp),
@@ -54,7 +58,7 @@ fun CardComponents(
                 )
                 .background(
                     brush = Brush.verticalGradient(
-                        colors = listOf(Color(0xFF4CAF50), Color(0xFF81C784))
+                        colors = listOf(Color(0xFF4CAF50), Color.White)
                     )
                 )
                 .padding(8.dp)

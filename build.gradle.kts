@@ -4,5 +4,5 @@ plugins {
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.kotlin.compose) apply false
     id("com.google.dagger.hilt.android") version "2.56.2" apply false
-    id("androidx.navigation.safeargs.kotlin") version "2.9.1" apply false
+    //id("androidx.navigation.safeargs.kotlin") version "2.9.1" apply false
 }

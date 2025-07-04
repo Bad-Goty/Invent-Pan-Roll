@@ -10,12 +10,13 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.inventpanroll.R
 import com.example.inventpanroll.presentation.components.CardComponents
 import com.example.inventpanroll.presentation.components.MyScaffold
 
 @Composable
-fun MainView() {
+fun MainView(navController: NavController) {
     MyScaffold(
         Title = "Inventario",
         ClickAction = { println("Hola") }
@@ -33,7 +34,8 @@ fun MainView() {
                 Img = R.drawable.cpu,
                 Activos = "51",
                 Inactivos = "51",
-                Mantenimientos = "0"
+                Mantenimientos = "0",
+                ClickAction = { navController.navigate("cpu") }
             )
 
             Spacer(Modifier.height(25.dp))

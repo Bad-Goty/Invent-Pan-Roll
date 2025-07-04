@@ -4,7 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     id ("kotlin-kapt")
     id ("dagger.hilt.android.plugin")
-    id ("androidx.navigation.safeargs.kotlin")
+    //id ("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -47,9 +47,10 @@ dependencies {
     //Iconos
     implementation("androidx.compose.material:material-icons-extended:1.7.8")
 
-    // Navigation Component
+   /* // Navigation Component
     implementation ("androidx.navigation:navigation-fragment-ktx:2.9.1")
-    implementation ("androidx.navigation:navigation-ui-ktx:2.9.1")
+    implementation ("androidx.navigation:navigation-ui-ktx:2.9.1")*/
+    implementation(libs.androidx.navigation.compose)
 
     // Hilt Dependency Injection
     implementation ("com.google.dagger:hilt-android:2.56.2")
