@@ -58,7 +58,7 @@ fun CardComponents(
                 )
                 .background(
                     brush = Brush.verticalGradient(
-                        colors = listOf(Color(0xFF4CAF50), Color.White)
+                        colors = listOf(Color(0xFF14628C), Color.White)
                     )
                 )
                 .padding(8.dp)
@@ -71,7 +71,7 @@ fun CardComponents(
                     fontSize = 25.sp,
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center,
-                    color = Color.Black
+                    color = Color.White
                 )
 
                 Row(modifier = Modifier.fillMaxSize(), verticalAlignment = Alignment.CenterVertically) {
